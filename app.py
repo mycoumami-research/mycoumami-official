@@ -1124,7 +1124,9 @@ elif menu == "Admin":
     )
 
     if len(PASSWORD) < 16 or not REMOTE:
-
+        st.write("Mat khau hop le:", len(PASSWORD) >= 16)
+        st.write("Co GitHub Token:", bool(TOKEN))
+        st.write("Co GitHub Repo:", bool(REPO))
         st.warning(
             "Chức năng Admin chưa được cấu hình. "
             "Cần thêm GitHub token và mật khẩu "

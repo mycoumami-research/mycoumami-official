@@ -1004,7 +1004,7 @@ def render_showcase(settings, get_file):
 
         <a href="#trang-chu">TRANG CHỦ</a>
 
-        <details class="nav-dropdown">
+        <details class="nav-dropdown" name="myco-menu">
             <summary>GIỚI THIỆU</summary>
             <div class="dropdown-menu">
                 <a href="#cau-chuyen">Câu chuyện dự án</a>

@@ -439,11 +439,9 @@ def show_image(filename, caption=None):
 # GIAO DIEN MYCOUMAMI SCIENCE & NATURE
 
 if st.query_params.get("admin") != "1":
-
     from showcase import render_showcase
-
     render_showcase(settings, get_file)
-
+    st.html(ROOT / "effects.css")
     st.stop()
 # =============================================
 # 6. HEADER VA MENU

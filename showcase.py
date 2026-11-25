@@ -1418,65 +1418,48 @@ def render_showcase(settings, get_file):
     # POSTER VA VIDEO
     # ==========================================
 
-        col1 = st.container()     col2 = st.container()
+       
+    st.subheader("📄 Poster dự án")
 
-    with col1:
+    poster = get_file("poster.pdf")
 
-        st.subheader("📄 Poster dự án")
+    if poster and poster.startswith(b"%PDF"):
+        try:
+            import pymupdf
 
-        poster = get_file("poster.pdf")
+            with pymupdf.open(stream=poster, filetype="pdf") as doc:
+                for page in doc:
+                    scale = 3000 / max(page.rect.width, page.rect.height)
+                    pix = page.get_pixmap(matrix=pymupdf.Matrix(scale, scale))
+                    st.image(pix.tobytes("png"), width="stretch")
 
-        if poster and poster.startswith(b"%PDF"):
+        except Exception:
+            st.info("Vui lòng tải PDF để xem poster.")
 
-            try:
-                                import pymupdf                  with pymupdf.open(                     stream=poster,                     filetype="pdf"                 ) as doc:                      for page in doc:                          scale = 3000 / max(                             page.rect.width,                             page.rect.height                         )                          pix = page.get_pixmap(                             matrix=pymupdf.Matrix(                                 scale, scale                             ),                             alpha=False                         )                          st.image(                             pix.tobytes("png"),                             width="stretch"                         )
-            except Exception:
-                st.info(
-                    "Bạn có thể tải poster "
-                    "để xem toàn bộ nội dung."
-                )
-
-            st.download_button(
-                "Tải poster MYCOUMAMI",
-                data=poster,
-                file_name="MYCOUMAMI_Poster.pdf",
-                mime="application/pdf",
-                width="stretch"
-            )
-
-        else:
-            st.info("Poster đang được cập nhật.")
-
-    with col2:
-
-        st.subheader("🎬 Video giới thiệu")
-
-        video = get_file("video.mp4")
-
-        video_url = str(
-            settings.get("video_url", "")
+        st.download_button(
+            "Tải poster MYCOUMAMI",
+            data=poster,
+            file_name="MYCOUMAMI_Poster.pdf",
+            mime="application/pdf",
+            width="stretch"
         )
+    else:
+        st.info("Poster đang được cập nhật.")
 
-        if video:
+    st.divider()
+    st.subheader("🎬 Video giới thiệu")
 
-            st.video(
-                video,
-                format="video/mp4"
-            )
+    video = get_file("video.mp4")
+    video_url = str(settings.get("video_url", ""))
 
-        elif video_url.startswith((
-            "https://www.youtube.com/",
-            "https://youtu.be/"
-        )):
+    if video:
+        st.video(video, format="video/mp4")
+    elif video_url.startswith(("https://www.youtube.com/", "https://youtu.be/")):
+        st.video(video_url)
+    else:
+        st.info("Video giới thiệu đang được cập nhật.")
 
-            st.video(video_url)
 
-        else:
-
-            st.info(
-                "Video giới thiệu nhóm "
-                "đang được cập nhật."
-            )
 
     # ==========================================
     # DAT HANG VA FOOTER

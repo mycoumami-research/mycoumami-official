@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
 /* =========================================
    MYCOUMAMI - 3D CINEMATIC EXPERIENCE
    ========================================= */
@@ -1583,3 +1583,94 @@ html,
 }
 
 /* END YERSIN INSPIRED DESIGN */
+
+/* ======================================
+   MYCOUMAMI - VIETNAMESE FONT FIX
+   ====================================== */
+
+.myco,
+.myco h1,
+.myco h2,
+.myco h3,
+.myco h4,
+.myco p,
+.myco a,
+.myco span,
+.myco strong,
+.myco small,
+.myco summary {
+    font-family: "Be Vietnam Pro", Arial, sans-serif !important;
+    font-synthesis: none;
+}
+
+/* Tieu de chinh */
+
+.myco h1 {
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+    line-height: 1.35;
+}
+
+/* Tieu de cac khu vuc */
+
+.myco .myco-title,
+.myco h2 {
+    font-weight: 700 !important;
+    font-size: clamp(24px, 2.6vw, 36px);
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    text-transform: none !important;
+}
+
+/* Tieu de nho */
+
+.myco h3 {
+    font-weight: 600 !important;
+    line-height: 1.5;
+}
+
+/* Noi dung van ban */
+
+.myco p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.85;
+    letter-spacing: 0;
+}
+
+/* Thanh menu */
+
+.myco .nav-links a,
+.myco .nav-dropdown summary {
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+/* Chu gioi thieu */
+
+.myco .myco-kicker {
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+/* Tieu de trang chu */
+
+.myco .myco-hero h2 {
+    font-style: normal;
+    font-weight: 600 !important;
+    color: #F1D59A;
+}
+
+/* Hien thi tren dien thoai */
+
+@media (max-width: 768px) {
+    .myco .myco-title {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    .myco p {
+        font-size: 14px;
+    }
+}

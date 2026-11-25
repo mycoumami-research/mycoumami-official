@@ -1674,3 +1674,56 @@ html,
         font-size: 14px;
     }
 }
+/* MYCOUMAMI - PREMIUM DROPDOWN MENU */
+
+.myco .dropdown-menu {
+    min-width: 260px;
+    background: #FFFFFF;
+    border-top: 3px solid #D4A64C;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 12px 35px #00000026;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.myco .nav-dropdown:not([open]) .dropdown-menu {
+    display: none;
+}
+
+.myco .dropdown-menu a {
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: normal;
+    transition: background .2s, color .2s;
+}
+
+.myco .dropdown-menu a:hover {
+    background: #A30D21;
+    color: #FFFFFF;
+}
+
+.myco .nav-dropdown[open] .dropdown-menu {
+    animation: dropdownAppear .25s ease;
+}
+
+@keyframes dropdownAppear {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.myco .nav-links a::after {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .myco .nav-dropdown[open] .dropdown-menu {
+        animation: none;
+    }
+}

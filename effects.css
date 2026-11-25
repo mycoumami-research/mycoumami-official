@@ -813,3 +813,92 @@ html,
 /* ==========================================
    END - ARCTIC SCIENCE EDITION
    ========================================== */
+/* =========================================================
+   FIX HERO BACKGROUND + ADD YERSIN CORNER LOGO
+   MYCOUMAMI - ARCTIC SCIENCE PATCH
+   ========================================================= */
+
+/* 1) Cho hero làm mốc định vị */
+.myco .myco-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 2) Giảm lớp phủ đang che hình nền phía sau */
+.myco .myco-hero::before {
+    background: linear-gradient(
+        115deg,
+        rgba(19, 43, 82, 0.30),
+        rgba(18, 62, 133, 0.20),
+        rgba(36, 107, 206, 0.10)
+    ) !important;
+}
+
+/* 3) Giảm độ nặng của phần wave nếu đang che đáy */
+.myco .myco-wave {
+    opacity: 0.70;
+}
+
+/* 4) Làm khung ảnh sản phẩm trong hơn, không che nền */
+.myco .hero-product {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 12px !important;
+    border-radius: 28px !important;
+    box-shadow: 0 18px 40px rgba(7, 28, 53, 0.30) !important;
+}
+
+/* 5) Ảnh sản phẩm bo góc mềm hơn */
+.myco .hero-product img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: transparent !important;
+    border-radius: 20px;
+}
+
+/* 6) Thêm logo Yersin nhỏ ở góc trái hero */
+.myco .myco-hero::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 6;
+    width: 145px;
+    height: 48px;
+    background:
+        rgba(255, 255, 255, 0.96)
+        url("https://raw.githubusercontent.com/mycoumami-research/mycoumami-official/main/logo.png.png")
+        center / contain no-repeat;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(19, 43, 82, 0.20);
+    padding: 8px;
+}
+
+/* 7) Nếu muốn chữ bên trái nổi hơn trên nền ảnh */
+.myco .myco-hero h1,
+.myco .myco-hero p,
+.myco .myco-hero b {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* 8) Mobile */
+@media (max-width: 768px) {
+    .myco .myco-hero::after {
+        width: 110px;
+        height: 40px;
+        top: 12px;
+        left: 12px;
+    }
+
+    .myco .hero-product {
+        padding: 8px !important;
+        border-radius: 20px !important;
+    }
+
+    .myco .hero-product img {
+        border-radius: 14px;
+    }
+}

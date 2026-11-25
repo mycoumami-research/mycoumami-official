@@ -970,32 +970,77 @@ def render_showcase(settings, get_file):
     st.html(f"""
     <div class="myco">
 
-    <div class="myco-top">
-        FOOD INNOVATION & DEVELOPMENT 2026
-        &nbsp; • &nbsp; DALAT, VIETNAM
+   
+<div class="myco-top">
+    <span>DỰ ÁN NGHIÊN CỨU SINH VIÊN | FID 2026</span>
+
+    <div class="utility-links">
+        <a href="#dat-hang">Liên hệ</a>
+        <a href="https://yersin.edu.vn/"
+           target="_blank" rel="noopener noreferrer">
+            Website trường
+        </a>
+        <a href="?admin=1">Quản trị</a>
+    </div>
+</div>
+
+<header class="yersin-header">
+
+    <div class="yersin-logo-area">
+        {logo_html}
     </div>
 
-    <nav class="myco-nav">
-        <div class="myco-brand">
-            {logo_html}
-            <div class="brand-name">
-                MYCOUMAMI
+    <div class="yersin-brand">
+        <strong>MYCOUMAMI</strong>
+        <span>FOOD INNOVATION & DEVELOPMENT</span>
+        <small>DỰ ÁN NGHIÊN CỨU SINH VIÊN</small>
+    </div>
+
+</header>
+
+<nav class="myco-nav">
+
+    <div class="nav-links">
+
+        <a href="#trang-chu">TRANG CHỦ</a>
+
+        <details class="nav-dropdown">
+            <summary>GIỚI THIỆU</summary>
+            <div class="dropdown-menu">
+                <a href="#cau-chuyen">Câu chuyện dự án</a>
+                <a href="#doi-ngu">Đội ngũ thực hiện</a>
             </div>
-        </div>
+        </details>
 
-        <div class="nav-links">
-            <a href="#trang-chu">Trang chủ</a>
-            <a href="#cau-chuyen">Giới thiệu</a>
-            <a href="#san-pham">Sản phẩm</a>
-            <a href="#quy-trinh">Quy trình</a>
-            <a href="#nghien-cuu">Nghiên cứu</a>
-            <a href="#doi-ngu">Đội ngũ</a>
-        </div>
+        <details class="nav-dropdown">
+            <summary>SẢN PHẨM</summary>
+            <div class="dropdown-menu">
+                <a href="#san-pham">Hạt nêm MYCOUMAMI</a>
+                <a href="#quy-trinh">Quy trình sản xuất</a>
+            </div>
+        </details>
 
-        <a class="myco-btn" href="#dat-hang">
-            ☎ Đặt hàng
-        </a>
-    </nav>
+        <details class="nav-dropdown">
+            <summary>NGHIÊN CỨU KHOA HỌC</summary>
+            <div class="dropdown-menu">
+                <a href="#nghien-cuu">Nghiên cứu và phát triển</a>
+                <a href="#poster-video">Poster dự án</a>
+                <a href="#poster-video">Video giới thiệu</a>
+            </div>
+        </details>
+
+        <a href="#doi-ngu">ĐỘI NGŨ</a>
+
+        <a href="#dat-hang">LIÊN HỆ</a>
+
+    </div>
+
+    <a class="myco-btn" href="#dat-hang">
+        ĐẶT HÀNG NGAY
+    </a>
+
+</nav>
+
 
     <section id="trang-chu"
              class="myco-hero"

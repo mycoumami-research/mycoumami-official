@@ -1,0 +1,298 @@
+
+/* =========================================
+   MYCOUMAMI - 3D CINEMATIC EXPERIENCE
+   ========================================= */
+
+/* 01. SMOOTH SCROLLING */
+
+html,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+    scroll-behavior: smooth;
+}
+
+/* 02. HERO CINEMATIC ENTRANCE */
+
+.myco .myco-hero {
+    perspective: 1200px;
+    animation: cinematicEntrance 1.2s ease both;
+}
+
+@keyframes cinematicEntrance {
+    from {
+        opacity: 0;
+        transform: perspective(1200px)
+                   translateZ(-100px)
+                   translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(1200px)
+                   translateZ(0)
+                   translateY(0);
+    }
+}
+
+/* 03. PRODUCT FLOATING 3D */
+
+.myco .myco-hero .hero-product {
+    animation: productFloat 5s ease-in-out infinite;
+    transition: transform .6s ease;
+    transform-style: preserve-3d;
+    will-change: translate;
+}
+
+@keyframes productFloat {
+    0%, 100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -18px;
+    }
+}
+
+.myco .myco-hero .hero-product:hover {
+    animation-play-state: paused;
+    transform: perspective(1000px)
+               rotateY(-8deg)
+               rotateX(4deg)
+               scale(1.04);
+}
+
+/* 04. 3D SCROLL REVEAL */
+
+@keyframes sectionReveal {
+
+    from {
+        opacity: .15;
+        transform: perspective(1400px)
+                   translateY(65px)
+                   translateZ(-90px)
+                   rotateX(10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: perspective(1400px)
+                   translateY(0)
+                   translateZ(0)
+                   rotateX(0);
+    }
+}
+
+@supports (animation-timeline: view()) {
+
+    .myco .myco-section {
+
+        animation: sectionReveal linear both;
+
+        animation-timeline: view();
+
+        animation-range: entry 0% entry 85%;
+
+        transform-origin: center bottom;
+    }
+}
+
+/* 05. 3D INGREDIENT CARDS */
+
+.myco .myco-grid,
+.myco .profile-grid,
+.myco .process-grid {
+    perspective: 1400px;
+}
+
+.myco .myco-card,
+.myco .profile-card,
+.myco .process-step {
+    transform-style: preserve-3d;
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+}
+
+.myco .myco-card:hover,
+.myco .profile-card:hover,
+.myco .process-step:hover {
+
+    transform:
+        translateY(-10px)
+        rotateX(5deg)
+        rotateY(-5deg)
+        scale(1.025);
+
+    box-shadow:
+        0 25px 45px rgba(16,75,55,.20);
+
+    border-color: #D4B36B;
+}
+
+/* 06. INGREDIENT ICONS */
+
+.myco .card-icon {
+
+    transition: transform .5s ease;
+}
+
+.myco .myco-card:hover .card-icon {
+
+    transform:
+        translateY(-5px)
+        scale(1.15)
+        rotate(-8deg);
+}
+
+/* 07. TEAM PORTRAITS */
+
+.myco .portrait-frame img,
+.myco .advisor-portrait img {
+
+    transition: transform .7s ease;
+}
+
+.myco .profile-card:hover img {
+
+    transform: scale(1.08);
+}
+
+.myco .advisor-portrait:hover img {
+
+    transform: scale(1.08);
+}
+
+/* 08. GOLDEN BUTTON SHINE */
+
+.myco .myco-btn {
+
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.myco .myco-btn::after {
+
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+
+    pointer-events: none;
+}
+
+.myco .myco-btn:hover::after {
+
+    animation: buttonShine .8s ease;
+}
+
+@keyframes buttonShine {
+
+    to {
+        left: 160%;
+    }
+}
+
+/* 09. NAVIGATION EFFECT */
+
+.myco .nav-links a {
+
+    position: relative;
+}
+
+.myco .nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #B64C28;
+
+    transition: width .3s ease;
+}
+
+.myco .nav-links a:hover::after {
+
+    width: 100%;
+}
+
+/* 10. SCIENCE FEATURE EFFECT */
+
+.myco .science-strip > div {
+
+    transition: transform .4s ease;
+}
+
+.myco .science-strip > div:hover {
+
+    transform: translateY(-6px) scale(1.05);
+}
+
+/* 11. MOBILE OPTIMIZATION */
+
+@media (max-width: 700px) {
+
+    .myco .myco-hero .hero-product {
+        animation: none;
+    }
+
+    .myco .myco-section {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* 12. TOUCH SCREEN OPTIMIZATION */
+
+@media (hover: none) {
+
+    .myco .myco-card:hover,
+    .myco .profile-card:hover,
+    .myco .process-step:hover,
+    .myco .myco-hero .hero-product:hover {
+
+        transform: none;
+    }
+}
+
+/* 13. REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .myco *,
+    .myco *::before,
+    .myco *::after {
+
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+
+    .myco .myco-section {
+
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -240,7 +240,13 @@ ALLOWED_FILES = {
     "team.png",
     "video.mp4"
 }
-
+ALLOWED_FILES.update({
+    "advisor.png",
+    "hieu.png",
+    "tram.png",
+    "tam.png",
+    "huyen.png"
+})
 @st.cache_data(ttl=60, max_entries=24)
 def load_file(filename):
 
@@ -1330,7 +1336,24 @@ elif menu == "Admin":
                 "Video giới thiệu":
                     ("video.mp4", ["mp4"])
             }
+            media_types.update({
 
+                "Ảnh GVHD - ThS. Thi Đình Nguyên":
+                    ("advisor.png", ["png", "jpg", "jpeg"]),
+
+                "Ảnh Hoàng Trọng Hiếu":
+                    ("hieu.png", ["png", "jpg", "jpeg"]),
+
+                "Ảnh Lê Quỳnh Trâm":
+                    ("tram.png", ["png", "jpg", "jpeg"]),
+
+                "Ảnh Trương Thị Ngọc Tâm":
+                    ("tam.png", ["png", "jpg", "jpeg"]),
+
+                "Ảnh Trần Lê Ngọc Huyền":
+                    ("huyen.png", ["png", "jpg", "jpeg"])
+
+            })
             choice = st.selectbox(
                 "Chọn nội dung cần thay đổi",
                 list(media_types.keys())

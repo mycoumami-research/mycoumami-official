@@ -296,3 +296,520 @@ html,
         transform: none;
     }
 }
+
+
+
+/* ==========================================
+   MYCOUMAMI VERSION 13
+   ARCTIC SCIENCE EDITION
+   ========================================== */
+
+:root {
+    --arctic-primary: #123E85;
+    --arctic-secondary: #246BCE;
+    --arctic-accent: #00B8D9;
+    --arctic-white: #FFFFFF;
+    --arctic-dark: #132B52;
+    --arctic-border: #CADBED;
+    --arctic-light: #73E7FF;
+}
+
+/* 01. WEBSITE BACKGROUND */
+
+.stApp {
+    background: #FFFFFF !important;
+    color: #132B52;
+}
+
+[data-testid="stHeader"] {
+    background: #FFFFFF !important;
+}
+
+[data-testid="stSidebar"] {
+    background: #132B52;
+}
+
+.myco {
+    color: #132B52;
+}
+
+.myco h1,
+.myco h2,
+.myco h3 {
+    color: #132B52;
+}
+
+.myco p {
+    color: #243D61;
+}
+
+.myco .myco-kicker {
+    color: #246BCE;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* 02. TOP BRAND BAR */
+
+.myco .myco-top {
+    background: linear-gradient(
+        110deg,
+        #132B52,
+        #123E85,
+        #246BCE
+    );
+    color: #FFFFFF;
+    border-bottom: 3px solid #00B8D9;
+}
+
+/* 03. NAVIGATION */
+
+.myco .myco-nav {
+    background: #FFFFFF;
+    border-bottom: 1px solid #CADBED;
+    box-shadow: 0 5px 20px #132B520D;
+}
+
+.myco .brand-name {
+    color: #123E85;
+    border-color: #CADBED;
+}
+
+.myco .nav-links a {
+    color: #132B52;
+    font-weight: 650;
+}
+
+.myco .nav-links a:hover {
+    color: #246BCE;
+}
+
+.myco .nav-links a::after {
+    background: #00B8D9;
+}
+
+/* 04. CINEMATIC HERO BANNER */
+
+.myco .myco-hero {
+    position: relative;
+    isolation: isolate;
+    background-color: #132B52;
+    border-bottom: 6px solid #00B8D9;
+    box-shadow: 0 15px 40px #132B5226;
+}
+
+/* Blue overlay - preserve original banner */
+
+.myco .myco-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background: linear-gradient(
+        115deg,
+        rgba(19,43,82,.98),
+        rgba(18,62,133,.88),
+        rgba(36,107,206,.65)
+    );
+}
+
+.myco .myco-hero h1 {
+    color: #FFFFFF;
+    text-shadow: 0 5px 25px #132B5270;
+}
+
+.myco .myco-hero h2 {
+    color: #73E7FF;
+}
+
+.myco .myco-hero p {
+    color: #FFFFFF;
+}
+
+.myco .myco-hero .myco-kicker {
+    color: #73E7FF;
+}
+
+.myco .hero-product {
+    box-shadow:
+        0 20px 50px #071C3555,
+        0 0 35px #00B8D933;
+}
+
+/* 05. HERO FEATURES */
+
+.myco .feature-icon {
+    background: #123E85;
+    border: 1px solid #00B8D9;
+    color: #FFFFFF;
+    box-shadow: 0 0 18px #00B8D933;
+}
+
+.myco .hero-feature b {
+    color: #FFFFFF;
+}
+
+.myco .hero-feature small {
+    color: #FFFFFF;
+}
+
+.myco .myco-wave {
+    background: linear-gradient(
+        90deg,
+        #132B52,
+        #246BCE,
+        #00B8D9
+    );
+}
+
+/* 06. BUTTONS */
+
+.myco .myco-btn {
+    background: linear-gradient(
+        120deg,
+        #123E85,
+        #246BCE
+    );
+    color: #FFFFFF !important;
+    border: 1px solid #246BCE;
+    box-shadow: 0 8px 24px #246BCE30;
+}
+
+.myco .myco-btn:hover {
+    background: #132B52;
+    color: #FFFFFF !important;
+    border-color: #00B8D9;
+    box-shadow: 0 8px 30px #00B8D940;
+}
+
+.myco .myco-hero .myco-btn {
+    background: #00B8D9;
+    color: #132B52 !important;
+    border-color: #00B8D9;
+}
+
+.myco .myco-hero .myco-btn:hover {
+    background: #73E7FF;
+    color: #132B52 !important;
+}
+
+.myco .outline-btn {
+    color: #123E85;
+    border: 1px solid #246BCE;
+    background: #FFFFFF;
+}
+
+.myco .outline-btn:hover {
+    background: #123E85;
+    color: #FFFFFF;
+}
+
+/* 07. SCIENTIFIC STATISTICS */
+
+.myco .science-strip {
+    background: linear-gradient(
+        125deg,
+        #132B52,
+        #123E85
+    );
+    border-bottom: 4px solid #00B8D9;
+    box-shadow: 0 12px 30px #132B5220;
+}
+
+.myco .science-strip strong {
+    color: #73E7FF;
+    text-shadow: 0 0 15px #00B8D933;
+}
+
+.myco .science-strip small {
+    color: #FFFFFF;
+}
+
+/* 08. INGREDIENT SECTION */
+
+.myco .ingredients-area {
+    background: linear-gradient(
+        135deg,
+        #123E85,
+        #246BCE
+    );
+    border: 1px solid #246BCE;
+}
+
+.myco .ingredients-area .myco-title {
+    color: #FFFFFF;
+}
+
+.myco .ingredients-area .myco-kicker {
+    color: #BDF5FF;
+}
+
+.myco .myco-card {
+    background: #FFFFFF;
+    color: #132B52;
+    border: 1px solid #CADBED;
+    box-shadow: 0 10px 30px #132B5210;
+}
+
+.myco .myco-card h3 {
+    color: #123E85;
+}
+
+.myco .myco-card p {
+    color: #243D61;
+}
+
+.myco .myco-card:hover {
+    border-color: #00B8D9;
+    box-shadow: 0 20px 45px #246BCE30;
+}
+
+.myco .accent-green {
+    border-top: 6px solid #123E85;
+}
+
+.myco .accent-red {
+    border-top: 6px solid #246BCE;
+}
+
+.myco .accent-gold {
+    border-top: 6px solid #00B8D9;
+}
+
+/* 09. PRODUCTION PROCESS */
+
+.myco .process-area {
+    background: #132B52;
+    border: 1px solid #246BCE;
+}
+
+.myco .process-area .myco-title {
+    color: #FFFFFF;
+}
+
+.myco .process-area .myco-kicker {
+    color: #73E7FF;
+}
+
+.myco .process-area > p {
+    color: #FFFFFF;
+}
+
+.myco .process-step {
+    background: #FFFFFF;
+    color: #132B52;
+    border: 1px solid #CADBED;
+    border-bottom: 5px solid #00B8D9;
+}
+
+.myco .step-number {
+    color: #246BCE;
+}
+
+.myco .process-step h3 {
+    color: #123E85;
+}
+
+.myco .process-step:hover {
+    border-color: #00B8D9;
+    box-shadow: 0 15px 35px #00B8D933;
+}
+
+/* 10. TEAM SECTION */
+
+.myco .team-area {
+    background: #FFFFFF;
+    border: 1px solid #CADBED;
+    border-top: 5px solid #123E85;
+    box-shadow: 0 10px 35px #132B5210;
+}
+
+.myco .advisor-card,
+.myco .advisor-profile {
+    background: linear-gradient(
+        125deg,
+        #132B52,
+        #123E85,
+        #246BCE
+    );
+    color: #FFFFFF;
+    border: none;
+    border-left: 5px solid #00B8D9;
+}
+
+.myco .advisor-card h3,
+.myco .advisor-card p,
+.myco .advisor-profile h2,
+.myco .advisor-profile p {
+    color: #FFFFFF;
+}
+
+.myco .advisor-profile .myco-kicker {
+    color: #73E7FF;
+}
+
+.myco .member {
+    background: #132B52;
+    color: #FFFFFF;
+    border: 1px solid #246BCE;
+    border-left: 4px solid #00B8D9;
+    box-shadow: 0 5px 15px #132B5215;
+}
+
+.myco .member:hover {
+    background: #123E85;
+    border-color: #00B8D9;
+}
+
+.myco .profile-card {
+    background: #FFFFFF;
+    border: 1px solid #CADBED;
+    border-bottom: 5px solid #246BCE;
+}
+
+.myco .profile-role {
+    color: #246BCE;
+}
+
+.myco .profile-card small {
+    color: #123E85;
+}
+
+.myco .advisor-portrait {
+    border-color: #00B8D9;
+}
+
+/* OPTIONAL EXPANDABLE MEMBER PROFILES */
+
+.myco .member-profile {
+    background: #132B52;
+    border-color: #246BCE;
+}
+
+.myco .member-number,
+.myco .member-heading small,
+.myco .member-toggle::after {
+    color: #73E7FF;
+}
+
+.myco .member-content {
+    background: #FFFFFF;
+    color: #132B52;
+}
+
+.myco .member-info label {
+    color: #246BCE;
+}
+
+/* 11. IMAGE PLACEHOLDERS */
+
+.myco .myco-placeholder,
+.myco .portrait-frame,
+.myco .member-image {
+    background: #EDF4FC;
+    color: #123E85;
+    border-color: #CADBED;
+}
+
+/* 12. POSTER AND VIDEO */
+
+.stApp [data-testid="stHeading"] h2,
+.stApp [data-testid="stHeading"] h3 {
+    color: #123E85;
+}
+
+[data-testid="stDownloadButton"] button {
+    background: #123E85;
+    color: #FFFFFF;
+    border: 1px solid #246BCE;
+    border-radius: 12px;
+}
+
+[data-testid="stDownloadButton"] button:hover {
+    background: #132B52;
+    color: #FFFFFF;
+    border-color: #00B8D9;
+}
+
+/* 13. ORDER SECTION */
+
+.myco .order-area {
+    background: linear-gradient(
+        125deg,
+        #132B52,
+        #123E85,
+        #246BCE
+    );
+    border-bottom: 5px solid #00B8D9;
+    color: #FFFFFF;
+}
+
+.myco .order-area h2,
+.myco .order-area p {
+    color: #FFFFFF;
+}
+
+.myco .order-area > div:first-child {
+    color: #73E7FF !important;
+}
+
+.myco .price-text {
+    color: #73E7FF;
+    text-shadow: 0 0 20px #00B8D933;
+}
+
+.myco .order-area .myco-btn {
+    background: #00B8D9;
+    color: #132B52 !important;
+}
+
+.myco .order-area .myco-btn:hover {
+    background: #FFFFFF;
+    color: #123E85 !important;
+}
+
+.myco .contact-note {
+    background: #FFFFFF;
+    color: #132B52;
+}
+
+/* 14. FOOTER */
+
+.myco .myco-footer {
+    background: #132B52;
+    color: #FFFFFF;
+    border-top: 5px solid #00B8D9;
+}
+
+.myco .myco-footer h2 {
+    color: #73E7FF;
+}
+
+.myco .myco-footer p {
+    color: #FFFFFF;
+}
+
+.myco .admin-link {
+    color: #73E7FF;
+}
+
+/* 15. TEXT SELECTION */
+
+.myco ::selection {
+    background: #00B8D9;
+    color: #132B52;
+}
+
+/* 16. KEYBOARD ACCESSIBILITY */
+
+.myco a:focus-visible,
+.myco summary:focus-visible {
+    outline: 3px solid #00B8D9;
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   END - ARCTIC SCIENCE EDITION
+   ========================================== */

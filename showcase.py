@@ -1188,7 +1188,7 @@ def render_showcase(settings, get_file):
     # POSTER VA VIDEO
     # ==========================================
 
-    col1, col2 = st.columns(2)
+        col1 = st.container()     col2 = st.container()
 
     with col1:
 
@@ -1199,7 +1199,7 @@ def render_showcase(settings, get_file):
         if poster and poster.startswith(b"%PDF"):
 
             try:
-                st.pdf(poster, height=580)
+                                import pymupdf                  with pymupdf.open(                     stream=poster,                     filetype="pdf"                 ) as doc:                      for page in doc:                          scale = 3000 / max(                             page.rect.width,                             page.rect.height                         )                          pix = page.get_pixmap(                             matrix=pymupdf.Matrix(                                 scale, scale                             ),                             alpha=False                         )                          st.image(                             pix.tobytes("png"),                             width="stretch"                         )
             except Exception:
                 st.info(
                     "Bạn có thể tải poster "

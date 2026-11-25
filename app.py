@@ -484,7 +484,7 @@ menu = st.radio(
         "Đặt hàng",
         "Admin"
     ],
-    horizontal=True,
+    horizontal=True, index=6,
     label_visibility="collapsed"
 )
 

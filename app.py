@@ -430,7 +430,15 @@ def show_image(filename, caption=None):
         return True
 
     return False
+# GIAO DIEN MYCOUMAMI SCIENCE & NATURE
 
+if st.query_params.get("admin") != "1":
+
+    from showcase import render_showcase
+
+    render_showcase(settings, get_file)
+
+    st.stop()
 # =============================================
 # 6. HEADER VA MENU
 # =============================================

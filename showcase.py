@@ -163,6 +163,186 @@ def render_showcase(settings, get_file):
         <p>Danh sách thành viên đang cập nhật.</p>
         """
 
+    portrait_files = {
+        "Hoàng Trọng Hiếu": "hieu.png",
+        "Lê Quỳnh Trâm": "tram.png",
+        "Trương Thị Ngọc Tâm": "tam.png",
+        "Trần Lê Ngọc Huyền": "huyen.png"
+    }
+
+    advisor_photo = picture(
+        "advisor.png",
+        "Ảnh giảng viên hướng dẫn",
+        "portrait"
+    )
+
+    profiles_html = ""
+
+    for member in members:
+
+        name = re.split(
+            r"\s+[–—-]\s+",
+            member,
+            maxsplit=1
+        )[0].strip()
+
+        role = (
+            "Đại diện nhóm"
+            if name == "Hoàng Trọng Hiếu"
+            else "Thành viên nghiên cứu"
+        )
+
+        filename = portrait_files.get(name)
+
+        if filename:
+            photo = picture(
+                filename,
+                name,
+                "portrait"
+            )
+        else:
+            photo = """
+            <div class="myco-placeholder">
+                Ảnh đang cập nhật
+            </div>
+            """
+
+        profiles_html += f"""
+        <div class="profile-card">
+
+            <div class="portrait-frame">
+                {photo}
+            </div>
+
+            <h3>{name}</h3>
+
+            <div class="profile-role">
+                {role}
+            </div>
+
+            <small>
+                MYCOUMAMI TEAM
+            </small>
+
+        </div>
+        """
+
+    st.html("""
+    <style>
+
+    .myco .advisor-profile {
+        background: linear-gradient(
+            135deg,#E0EBE5,#F8F3E9
+        );
+        border: 1px solid #B6D1CC;
+        border-bottom: 5px solid #D4B36B;
+        border-radius: 25px;
+        padding: 35px;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .myco .advisor-portrait {
+        width: 190px;
+        height: 190px;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid white;
+        box-shadow: 0 6px 20px #104B3722;
+    }
+
+    .myco .advisor-portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+    }
+
+    .myco .profile-grid {
+        display: grid;
+        grid-template-columns:
+            repeat(4,minmax(0,1fr));
+        gap: 22px;
+        margin: 25px 0;
+    }
+
+    .myco .profile-card {
+        background: white;
+        border: 1px solid #E4DCCB;
+        border-radius: 20px;
+        padding: 16px;
+        text-align: center;
+        box-shadow: 0 8px 25px #104B3710;
+        transition: transform .3s ease;
+        border-bottom: 4px solid #D4B36B;
+    }
+
+    .myco .profile-card:hover {
+        transform: translateY(-7px);
+    }
+
+    .myco .portrait-frame {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        border-radius: 15px;
+        overflow: hidden;
+        background: #E0EBE5;
+    }
+
+    .myco .portrait-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+    }
+
+    .myco .portrait-frame .myco-placeholder,
+    .myco .advisor-portrait .myco-placeholder {
+        height: 100%;
+        min-height: 0;
+        padding: 10px;
+    }
+
+    .myco .profile-card h3 {
+        font-size: 19px;
+        margin: 18px 0 8px;
+        color: #104B37;
+    }
+
+    .myco .profile-role {
+        font-size: 13px;
+        font-weight: 700;
+        color: #B64C28;
+        margin-bottom: 10px;
+    }
+
+    .myco .profile-card small {
+        color: #719381;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    @media(max-width:900px) {
+
+        .myco .profile-grid {
+            grid-template-columns:
+                repeat(2,minmax(0,1fr));
+        }
+
+    }
+
+    @media(max-width:450px) {
+
+        .myco .profile-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    </style>
+    """)
+
     if valid_phone:
 
         action_label = (
@@ -1125,7 +1305,57 @@ def render_showcase(settings, get_file):
 
     </section>
 
+ 
     <!-- DOI NGU -->
+
+    <section class="myco-section"
+             id="doi-ngu">
+
+        <div class="team-area">
+
+            <div class="myco-kicker">
+                Meet our team
+            </div>
+
+            <h2 class="myco-title">
+                Những người tạo nên MYCOUMAMI
+            </h2>
+
+            <div class="advisor-profile">
+
+                <div class="advisor-portrait">
+                    {advisor_photo}
+                </div>
+
+                <div class="myco-kicker">
+                    GIẢNG VIÊN HƯỚNG DẪN
+                </div>
+
+                <h2>{advisor}</h2>
+
+                <p>
+                    Trường Đại học Yersin Đà Lạt
+                </p>
+
+            </div>
+
+            <h2>Thành viên nhóm nghiên cứu</h2>
+
+            <div class="profile-grid">
+
+                {profiles_html}
+
+            </div>
+
+            <h2>
+                Hành trình cùng MYCOUMAMI
+            </h2>
+
+            {team}
+
+        </div>
+
+    </section>
 
     <section class="myco-section"
              id="doi-ngu">

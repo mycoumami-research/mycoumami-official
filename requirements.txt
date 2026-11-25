@@ -1,3 +1,4 @@
 streamlit[pdf]>=1.49,<2
 requests
 pillow
+pymupdf

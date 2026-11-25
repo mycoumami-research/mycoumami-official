@@ -902,3 +902,684 @@ html,
         border-radius: 14px;
     }
 }
+
+/* =========================================
+   MYCOUMAMI V17
+   YERSIN UNIVERSITY INSPIRED DESIGN
+   ========================================= */
+
+:root {
+    --yu-red: #A30D21;
+    --yu-darkred: #760918;
+    --yu-gold: #D4A64C;
+    --yu-white: #FFFFFF;
+    --yu-black: #222222;
+    --yu-gray: #F3F4F5;
+    --yu-green: #104B37;
+}
+
+/* 01. GLOBAL DESIGN */
+
+.stApp {
+    background: #FFFFFF !important;
+}
+
+[data-testid="stHeader"] {
+    background: #FFFFFF !important;
+}
+
+.block-container {
+    max-width: 100% !important;
+    padding: 1rem 0 0 !important;
+}
+
+.myco {
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myco h1,
+.myco h2,
+.myco h3 {
+    color: #A30D21;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myco p {
+    color: #333333;
+    line-height: 1.8;
+}
+
+.myco a {
+    text-decoration: none;
+}
+
+/* 02. TOP UTILITY BAR */
+
+.myco .myco-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: #A30D21;
+    color: #FFFFFF;
+    padding: 10px 5%;
+    border-bottom: none;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
+
+.utility-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.myco .utility-links a {
+    color: #FFFFFF;
+}
+
+.myco .utility-links a:hover {
+    color: #F1D59A;
+}
+
+/* 03. UNIVERSITY HEADER */
+
+.yersin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 5%;
+    gap: 30px;
+    background: #FFFFFF;
+}
+
+.yersin-logo-area {
+    width: 290px;
+    max-width: 50%;
+}
+
+.myco .yersin-logo-area .university-logo {
+    width: 100% !important;
+    max-height: 95px;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.yersin-brand {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.yersin-brand strong {
+    color: #104B37;
+    font-size: clamp(22px, 3vw, 42px);
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.yersin-brand span {
+    color: #A30D21;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.yersin-brand small {
+    color: #666666;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+/* 04. MAIN NAVIGATION */
+
+.myco .myco-nav {
+    background: #8C1020;
+    padding: 0 5%;
+    border: none;
+    border-radius: 0;
+    gap: 15px;
+    position: relative;
+    z-index: 30;
+    box-shadow: 0 4px 20px #00000015;
+}
+
+.myco .nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.myco .nav-links > a,
+.myco .nav-dropdown > summary {
+    display: block;
+    padding: 20px 15px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.myco .nav-links > a:hover,
+.myco .nav-dropdown > summary:hover,
+.myco .nav-dropdown[open] > summary {
+    background: #650914;
+    color: #FFFFFF;
+}
+
+.myco .nav-links a::after {
+    background: #D4A64C;
+}
+
+/* 05. DROPDOWN MENU */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown summary {
+    list-style: none;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-dropdown summary::after {
+    content: " ▾";
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    max-width: 90vw;
+    background: #FFFFFF;
+    border-top: 3px solid #D4A64C;
+    box-shadow: 0 10px 30px #00000022;
+    z-index: 50;
+}
+
+.myco .dropdown-menu a {
+    display: block;
+    color: #333333;
+    padding: 15px 18px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.myco .dropdown-menu a:hover {
+    background: #A30D21;
+    color: #FFFFFF;
+}
+
+/* 06. HERO BANNER */
+
+.myco .myco-hero {
+    min-height: 540px;
+    position: relative;
+    border-radius: 0;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 5px solid #A30D21;
+    background-color: #263A32;
+    box-shadow: none;
+}
+
+.myco .myco-hero::before {
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,.82) 0%,
+        rgba(0,0,0,.45) 45%,
+        rgba(0,0,0,.48) 100%
+    ) !important;
+}
+
+/* Remove old corner logo overlay */
+
+.myco .myco-hero::after {
+    content: none !important;
+}
+
+.myco .myco-hero h1 {
+    color: #FFFFFF;
+    font-size: clamp(35px,4.5vw,72px);
+    font-weight: 900;
+    text-shadow: 0 3px 20px #00000055;
+}
+
+.myco .myco-hero h2 {
+    color: #F1D59A;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+.myco .myco-hero p {
+    color: #FFFFFF;
+}
+
+.myco .myco-hero .myco-kicker {
+    color: #F1D59A;
+    letter-spacing: 3px;
+}
+
+.myco .hero-product {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-radius: 10px !important;
+    box-shadow: 0 20px 40px #00000020 !important;
+}
+
+.myco .feature-icon {
+    background: #A30D21;
+    border: 1px solid #D4A64C;
+    border-radius: 5px;
+}
+
+.myco .hero-feature b,
+.myco .hero-feature small {
+    color: #FFFFFF;
+}
+
+.myco .myco-wave {
+    height: 5px;
+    border-radius: 0;
+    background: #A30D21;
+    opacity: 1;
+}
+
+/* 07. BUTTONS */
+
+.myco .myco-btn,
+.myco .myco-hero .myco-btn,
+.myco .order-area .myco-btn {
+    background: #A30D21;
+    color: #FFFFFF !important;
+    border: 1px solid #A30D21;
+    border-radius: 4px;
+    padding: 14px 24px;
+    font-weight: 700;
+    box-shadow: none;
+}
+
+.myco .myco-nav .myco-btn {
+    background: #FFFFFF;
+    color: #A30D21 !important;
+}
+
+.myco .myco-btn:hover,
+.myco .myco-hero .myco-btn:hover,
+.myco .order-area .myco-btn:hover {
+    background: #760918;
+    color: #FFFFFF !important;
+}
+
+.myco .outline-btn {
+    color: #A30D21;
+    background: #FFFFFF;
+    border: 1px solid #A30D21;
+    border-radius: 4px;
+}
+
+.myco .outline-btn:hover {
+    color: #FFFFFF;
+    background: #A30D21;
+}
+
+/* 08. GENERAL SECTIONS */
+
+.myco .myco-section {
+    padding: 65px 5%;
+}
+
+.myco .myco-title {
+    color: #A30D21;
+    font-size: clamp(25px,3vw,40px);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.myco .myco-kicker {
+    color: #A30D21;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.myco .myco-title::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: #D4A64C;
+    margin-top: 16px;
+}
+
+/* 09. STATISTICS */
+
+.myco .science-strip {
+    background: #A30D21;
+    border-radius: 0;
+    border: none;
+    padding: 35px;
+    box-shadow: none;
+}
+
+.myco .science-strip strong {
+    color: #FFFFFF;
+    font-size: 48px;
+}
+
+.myco .science-strip small {
+    color: #FFFFFF;
+}
+
+/* 10. INGREDIENTS */
+
+.myco .ingredients-area {
+    background: #F3F4F5;
+    border-radius: 0;
+    border: none;
+    padding: 40px 25px;
+}
+
+.myco .ingredients-area .myco-title,
+.myco .ingredients-area .myco-kicker {
+    color: #A30D21;
+}
+
+.myco .myco-card {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-top: 4px solid #A30D21;
+    border-radius: 5px;
+    padding: 28px;
+    box-shadow: 0 5px 20px #00000008;
+}
+
+.myco .myco-card h3 {
+    color: #A30D21;
+}
+
+.myco .myco-card p {
+    color: #333333;
+}
+
+.myco .myco-card:hover {
+    border-color: #A30D21;
+    box-shadow: 0 18px 35px #A30D2118;
+}
+
+.myco .accent-green {
+    border-top-color: #104B37;
+}
+
+.myco .accent-red {
+    border-top-color: #A30D21;
+}
+
+.myco .accent-gold {
+    border-top-color: #D4A64C;
+}
+
+/* 11. PRODUCTION PROCESS */
+
+.myco .process-area {
+    background: #F3F4F5;
+    border-radius: 0;
+    border: none;
+    padding: 40px 25px;
+}
+
+.myco .process-area .myco-title,
+.myco .process-area .myco-kicker {
+    color: #A30D21;
+}
+
+.myco .process-area > p {
+    color: #333333;
+}
+
+.myco .process-step {
+    background: #FFFFFF;
+    border: 1px solid #DDDDDD;
+    border-bottom: 4px solid #A30D21;
+    border-radius: 5px;
+}
+
+.myco .step-number {
+    color: #A30D21;
+    font-size: 44px;
+}
+
+.myco .process-step h3 {
+    color: #A30D21;
+}
+
+.myco .process-step:hover {
+    border-color: #A30D21;
+    box-shadow: 0 20px 35px #A30D2120;
+}
+
+/* 12. RESEARCH */
+
+.myco #nghien-cuu {
+    background: #FFFFFF;
+}
+
+.myco #poster-video {
+    background: #F3F4F5;
+}
+
+[data-testid="stDownloadButton"] button {
+    background: #A30D21;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+}
+
+/* 13. TEAM */
+
+.myco .team-area {
+    background: #FFFFFF;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.myco .advisor-card,
+.myco .advisor-profile {
+    background: #A30D21;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    border-left: 5px solid #D4A64C;
+}
+
+.myco .advisor-card h3,
+.myco .advisor-card p,
+.myco .advisor-profile h2,
+.myco .advisor-profile p {
+    color: #FFFFFF;
+}
+
+.myco .advisor-profile .myco-kicker {
+    color: #F1D59A;
+}
+
+.myco .member {
+    background: #F3F4F5;
+    color: #222222;
+    border: 1px solid #DDDDDD;
+    border-left: 4px solid #A30D21;
+    border-radius: 4px;
+}
+
+.myco .member:hover {
+    background: #A30D21;
+    color: #FFFFFF;
+}
+
+.myco .member-profile {
+    background: #A30D21;
+    border-color: #760918;
+    border-radius: 5px;
+}
+
+.myco .member-number,
+.myco .member-heading small,
+.myco .member-toggle::after {
+    color: #F1D59A;
+}
+
+.myco .member-info label {
+    color: #A30D21;
+}
+
+.myco .profile-card {
+    border-radius: 5px;
+    border-bottom: 4px solid #A30D21;
+}
+
+.myco .profile-role {
+    color: #A30D21;
+}
+
+.myco .portrait-frame,
+.myco .myco-placeholder,
+.myco .member-image {
+    background: #F3F4F5;
+}
+
+.myco .advisor-portrait {
+    border-color: #D4A64C;
+}
+
+/* 14. ORDER SECTION */
+
+.myco .order-area {
+    background: linear-gradient(
+        120deg,
+        #760918,
+        #A30D21
+    );
+    border-radius: 0;
+    border-bottom: 4px solid #D4A64C;
+}
+
+.myco .order-area h2,
+.myco .order-area p {
+    color: #FFFFFF;
+}
+
+.myco .price-text,
+.myco .order-area > div:first-child {
+    color: #F1D59A !important;
+}
+
+.myco .order-area .myco-btn {
+    background: #FFFFFF;
+    color: #A30D21 !important;
+}
+
+/* 15. FOOTER */
+
+.myco .myco-footer {
+    background: #760918;
+    color: #FFFFFF;
+    border-radius: 0;
+    border-top: 5px solid #D4A64C;
+    padding: 50px 5%;
+}
+
+.myco .myco-footer h2 {
+    color: #FFFFFF;
+    letter-spacing: 2px;
+}
+
+.myco .myco-footer p {
+    color: #FFFFFF;
+}
+
+.myco .admin-link {
+    color: #F1D59A;
+}
+
+/* 16. MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .yersin-header {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .yersin-logo-area {
+        width: 160px;
+    }
+
+    .yersin-brand strong {
+        font-size: 20px;
+    }
+
+    .yersin-brand span,
+    .yersin-brand small {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .myco .myco-nav {
+        padding: 8px 12px;
+    }
+
+    .myco .nav-links > a,
+    .myco .nav-dropdown > summary {
+        padding: 12px 10px;
+        font-size: 11px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        min-width: 0;
+    }
+
+    .myco .myco-hero {
+        min-height: auto;
+        padding: 35px 20px;
+    }
+
+    .myco .myco-section {
+        padding: 35px 15px;
+    }
+
+    .myco .ingredients-area,
+    .myco .process-area {
+        padding: 25px 15px;
+    }
+
+    .myco .science-strip {
+        padding: 20px 12px;
+    }
+
+    .myco .science-strip strong {
+        font-size: 28px;
+    }
+}
+
+/* 17. ACCESSIBILITY */
+
+.myco a:focus-visible,
+.myco summary:focus-visible {
+    outline: 3px solid #D4A64C;
+    outline-offset: 3px;
+}
+
+/* END YERSIN INSPIRED DESIGN */

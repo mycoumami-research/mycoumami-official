@@ -1148,24 +1148,219 @@ def render_showcase(settings, get_file):
 
         </div>
 
-        <div class="science-strip">
 
-            <div>
-                <strong>03</strong>
-                <small>Nguyên liệu chủ đạo</small>
-            </div>
+<div class="experiment-wrap">
+
+    <div class="science-strip">
+
+        <div>
+            <strong>03</strong>
+            <small>Nguyên liệu chủ đạo</small>
+        </div>
+
+        <details class="experiment-toggle">
+            <summary aria-controls="experiment-data">
+                <strong>17</strong>
+                <small>Nghiệm thức khảo sát</small>
+
+                <span class="experiment-button">
+                    Khám phá dữ liệu
+                </span>
+            </summary>
+        </details>
+
+        <div>
+            <strong>01</strong>
+            <small>Dự án đổi mới sáng tạo</small>
+        </div>
+
+    </div>
+
+    <div class="experiment-panel"
+         id="experiment-data">
+
+        <div class="myco-kicker">
+            EXPERIMENTAL RESEARCH DATA
+        </div>
+
+        <h2>
+            Khảo sát quá trình thủy phân bằng Papain
+        </h2>
+
+        <p>
+            Thiết kế thực nghiệm Box-Behnken
+            mở rộng với 17 nghiệm thức,
+            khảo sát ảnh hưởng của hoạt độ enzyme,
+            thời gian và nhiệt độ thủy phân.
+        </p>
+
+        <div class="experiment-stats">
 
             <div>
                 <strong>17</strong>
-                <small>Nghiệm thức khảo sát</small>
+                <span>Nghiệm thức</span>
             </div>
 
             <div>
-                <strong>01</strong>
-                <small>Dự án đổi mới sáng tạo</small>
+                <strong>0,290</strong>
+                <span>A570 cao nhất</span>
+            </div>
+
+            <div>
+                <strong>2.639</strong>
+                <span>Glu-eq cao nhất (mg/L)</span>
             </div>
 
         </div>
+
+        <div class="experiment-table-wrap">
+
+            <table class="experiment-table">
+
+                <thead>
+                    <tr>
+                        <th>Mẫu</th>
+                        <th>Papain (U/g)</th>
+                        <th>Thời gian (h)</th>
+                        <th>Nhiệt độ (°C)</th>
+                        <th>A570 TB ± SD</th>
+                        <th>Glu-eq (mg/L)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>TN01</td><td>2000</td>
+                        <td>1</td><td>55</td>
+                        <td>0,150 ± 0,006</td><td>1.352</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN02</td><td>4000</td>
+                        <td>1</td><td>55</td>
+                        <td>0,168 ± 0,003</td><td>1.523</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN03</td><td>2000</td>
+                        <td>3</td><td>55</td>
+                        <td>0,178 ± 0,004</td><td>1.612</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN04</td><td>4000</td>
+                        <td>3</td><td>55</td>
+                        <td>0,220 ± 0,018</td><td>1.997</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN05</td><td>2000</td>
+                        <td>2</td><td>45</td>
+                        <td>0,218 ± 0,008</td><td>1.979</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN06</td><td>4000</td>
+                        <td>2</td><td>45</td>
+                        <td>0,265 ± 0,005</td><td>2.410</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN07</td><td>2000</td>
+                        <td>2</td><td>65</td>
+                        <td>0,226 ± 0,007</td><td>2.052</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN08</td><td>4000</td>
+                        <td>2</td><td>65</td>
+                        <td>0,184 ± 0,006</td><td>1.667</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN09</td><td>3000</td>
+                        <td>1</td><td>45</td>
+                        <td>0,145 ± 0,005</td><td>1.309</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN10</td><td>3000</td>
+                        <td>3</td><td>45</td>
+                        <td>0,187 ± 0,007</td><td>1.691</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN11</td><td>3000</td>
+                        <td>1</td><td>65</td>
+                        <td>0,153 ± 0,005</td><td>1.382</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN12</td><td>3000</td>
+                        <td>3</td><td>65</td>
+                        <td>0,140 ± 0,008</td><td>1.260</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN13</td><td>3000</td>
+                        <td>2</td><td>55</td>
+                        <td>0,285 ± 0,008</td><td>2.593</td>
+                    </tr>
+
+                    <tr class="best-experiment">
+                        <td>TN14</td><td>3000</td>
+                        <td>2</td><td>55</td>
+                        <td>0,290 ± 0,011</td><td>2.639</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN15</td><td>3000</td>
+                        <td>2</td><td>55</td>
+                        <td>0,288 ± 0,016</td><td>2.621</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN16</td><td>2000</td>
+                        <td>2</td><td>55</td>
+                        <td>0,232 ± 0,004</td><td>2.110</td>
+                    </tr>
+
+                    <tr>
+                        <td>TN17</td><td>4000</td>
+                        <td>2</td><td>55</td>
+                        <td>0,248 ± 0,011</td><td>2.257</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="experiment-note">
+
+            <h3>Kết quả khảo sát</h3>
+
+            <p>
+                TN14 ghi nhận giá trị A570 trung bình
+                cao nhất trong tập dữ liệu khảo sát,
+                tại mức papain 3000 U/g,
+                thời gian 2 giờ và nhiệt độ 55°C.
+            </p>
+
+            <p>
+                Đây là kết quả thực nghiệm quan sát được,
+                chưa phải kết luận tối ưu hóa cuối cùng
+                của mô hình bề mặt đáp ứng.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
 
     </section>
 

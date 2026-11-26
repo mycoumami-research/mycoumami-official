@@ -2141,3 +2141,87 @@ html,
         transform: none !important;
     }
 }
+
+/* =========================================
+   MYCOUMAMI - INTERACTIVE SCIENCE LINK
+   ========================================= */
+
+html,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+    scroll-behavior: smooth;
+}
+
+.myco .science-link {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    text-decoration: none !important;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition:
+        background .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.myco .science-link strong {
+    color: #FFFFFF;
+}
+
+.myco .science-link small {
+    color: #FFFFFF;
+}
+
+.myco .science-link:hover {
+    background: #760918;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #00000025;
+}
+
+.myco .science-action {
+    display: block;
+    color: #F1D59A;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Vi tri dung khi cuon den nguyen lieu */
+
+.myco #san-pham {
+    scroll-margin-top: 90px;
+}
+
+/* Lam noi bat khu vuc khi duoc chon */
+
+.myco #san-pham:target .ingredients-area {
+    animation: ingredientHighlight 1.2s ease;
+}
+
+@keyframes ingredientHighlight {
+    0% {
+        box-shadow: 0 0 0 4px #D4A64C;
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html,
+    [data-testid="stAppViewContainer"],
+    [data-testid="stMain"] {
+        scroll-behavior: auto;
+    }
+
+    .myco .science-link,
+    .myco #san-pham:target .ingredients-area {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+}

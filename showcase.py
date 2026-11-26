@@ -1153,10 +1153,17 @@ def render_showcase(settings, get_file):
 
     <div class="science-strip">
 
-        <div>
-            <strong>03</strong>
-            <small>Nguyên liệu chủ đạo</small>
-        </div>
+       <a class="science-link" href="#san-pham">
+
+    <strong>03</strong>
+
+    <small>Nguyên liệu chủ đạo</small>
+
+    <span class="science-action">
+        Khám phá nguyên liệu ↓
+    </span>
+
+</a>
 
         <details class="experiment-toggle">
             <summary aria-controls="experiment-data">

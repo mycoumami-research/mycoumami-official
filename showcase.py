@@ -1171,102 +1171,203 @@ def render_showcase(settings, get_file):
 
     <!-- SAN PHAM -->
 
-    <section id="san-pham"
-             class="myco-section">
 
-        <div class="ingredients-area">
+<section id="san-pham" class="myco-section">
 
-            <div class="myco-kicker">
-                Inspired by Da Lat
-            </div>
+    <div class="ingredients-area">
 
-            <h2 class="myco-title">
-                Ba nguyên liệu - Một hương vị
-            </h2>
+        <div class="myco-kicker">
+            Inspired by Da Lat
+        </div>
 
-            <div class="myco-grid">
+        <h2 class="myco-title">
+            Ba nguyên liệu – Một hương vị
+        </h2>
 
-                <div class="myco-card accent-green">
-                    <div class="card-icon">🍄</div>
+        <div class="ingredient-stories">
+
+            <!-- NAM KIM CHAM -->
+
+            <details class="ingredient-story mushroom"
+                     name="ingredient-story">
+
+                <summary>
+
+                    <div class="ingredient-number">01</div>
+
+                    <div class="ingredient-icon">🍄</div>
+
                     <h3>Nấm kim châm</h3>
+
+                    <p>Nền tảng của vị Umami</p>
+
+                    <span class="story-button">
+                        Khám phá câu chuyện
+                    </span>
+
+                </summary>
+
+                <div class="story-content">
+
+                    <span class="story-label">
+                        THE FOUNDATION OF UMAMI
+                    </span>
+
+                    <h3>Hành trình hồi sinh từ chân nấm</h3>
+
                     <p>
-                    Nguồn nguyên liệu được khảo sát
-                    thủy phân để phát triển nền vị nấm.
+                        Trong quá trình sơ chế nấm kim châm,
+                        phần chân nấm thường bị cắt bỏ
+                        vì không phù hợp với quy cách
+                        thương mại.
                     </p>
+
+                    <p>
+                        Tuy nhiên, phần nguyên liệu này
+                        vẫn có tiềm năng khai thác
+                        nếu đáp ứng yêu cầu chế biến
+                        thực phẩm.
+                    </p>
+
+                    <p>
+                        MYCOUMAMI nghiên cứu ứng dụng
+                        enzyme papain để thủy phân protein,
+                        hướng đến phát triển nền vị umami
+                        cho sản phẩm hạt nêm.
+                    </p>
+
+                    <div class="story-value">
+                        Từ phụ phẩm đến giá trị mới.
+                    </div>
+
                 </div>
 
-                <div class="myco-card accent-red">
-                    <div class="card-icon">🍅</div>
+            </details>
+
+            <!-- CA CHUA -->
+
+            <details class="ingredient-story tomato"
+                     name="ingredient-story">
+
+                <summary>
+
+                    <div class="ingredient-number">02</div>
+
+                    <div class="ingredient-icon">🍅</div>
+
                     <h3>Cà chua</h3>
+
+                    <p>Sắc đỏ của nông sản Đà Lạt</p>
+
+                    <span class="story-button">
+                        Khám phá câu chuyện
+                    </span>
+
+                </summary>
+
+                <div class="story-content">
+
+                    <span class="story-label">
+                        THE NATURAL FLAVOR
+                    </span>
+
+                    <h3>Giá trị vượt ngoài hình thức</h3>
+
                     <p>
-                    Góp phần xây dựng nền hương vị
-                    và màu sắc cho sản phẩm.
+                        Không phải mọi quả cà chua
+                        đều đáp ứng tiêu chuẩn về
+                        kích thước và hình dáng
+                        của thị trường.
                     </p>
+
+                    <p>
+                        Những quả cà chua ngoài chuẩn
+                        thương mại nhưng vẫn phù hợp
+                        cho chế biến là nguồn nguyên liệu
+                        có thể được khai thác.
+                    </p>
+
+                    <p>
+                        MYCOUMAMI lựa chọn cà chua
+                        nhằm góp phần xây dựng nền
+                        hương vị và màu sắc đặc trưng
+                        cho sản phẩm.
+                    </p>
+
+                    <div class="story-value">
+                        Không hoàn hảo về hình thức,
+                        vẫn có giá trị sử dụng.
+                    </div>
+
                 </div>
 
-                <div class="myco-card accent-gold">
-                    <div class="card-icon">🥔</div>
+            </details>
+
+            <!-- KHOAI TAY -->
+
+            <details class="ingredient-story potato"
+                     name="ingredient-story">
+
+                <summary>
+
+                    <div class="ingredient-number">03</div>
+
+                    <div class="ingredient-icon">🥔</div>
+
                     <h3>Khoai tây</h3>
+
+                    <p>Sự cân bằng trong hương vị</p>
+
+                    <span class="story-button">
+                        Khám phá câu chuyện
+                    </span>
+
+                </summary>
+
+                <div class="story-content">
+
+                    <span class="story-label">
+                        THE BALANCE OF TASTE
+                    </span>
+
+                    <h3>Tiềm năng từ những củ khoai</h3>
+
                     <p>
-                    Định hướng bổ sung độ đầy vị
-                    và cấu trúc cho nền gia vị.
+                        Trong quá trình phân loại
+                        nông sản, một phần khoai tây
+                        không đáp ứng quy cách
+                        thương mại thông thường.
                     </p>
+
+                    <p>
+                        Thay vì bỏ qua nguồn nguyên liệu
+                        còn phù hợp cho chế biến,
+                        MYCOUMAMI hướng đến khai thác
+                        giá trị sử dụng của chúng.
+                    </p>
+
+                    <p>
+                        Khoai tây được lựa chọn với
+                        định hướng bổ sung cấu trúc,
+                        độ đầy vị và sự hài hòa
+                        cho nền gia vị.
+                    </p>
+
+                    <div class="story-value">
+                        Từ nông sản bị bỏ quên
+                        đến giá trị sử dụng mới.
+                    </div>
+
                 </div>
 
-            </div>
+            </details>
 
         </div>
 
-    </section>
+    </div>
 
-    <section class="myco-section">
+</section>
 
-        <div class="myco-two">
-
-            <div>
-                {product}
-            </div>
-
-            <div>
-                <div class="myco-kicker">
-                    MYCOUMAMI COLLECTION
-                </div>
-
-                <h2 class="myco-title">
-                    Hạt nêm nấm - rau củ
-                </h2>
-
-                <p>{description}</p>
-
-                <p>
-                    ✓ Nấm kim châm, cà chua, khoai tây
-                </p>
-
-                <p>
-                    ✓ Định hướng ứng dụng công nghệ enzyme
-                </p>
-
-                <p>
-                    ✓ Quy cách bao bì thiết kế: 100 g
-                </p>
-
-                <p>
-                    ✓ Định hướng sử dụng cho canh,
-                    súp và các món chế biến
-                </p>
-
-                <h3>Giá tham khảo: {price}</h3>
-
-                <a class="myco-btn"
-                   href="#dat-hang">
-                    Liên hệ sản phẩm →
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
 
     <!-- QUY TRINH -->
 

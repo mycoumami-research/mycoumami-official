@@ -1012,7 +1012,7 @@ def render_showcase(settings, get_file):
             </div>
         </details>
 
-        <details class="nav-dropdown">
+        <details class="nav-dropdown" name="myco-menu">
             <summary>SẢN PHẨM</summary>
             <div class="dropdown-menu">
                 <a href="#san-pham">Hạt nêm MYCOUMAMI</a>
@@ -1020,7 +1020,7 @@ def render_showcase(settings, get_file):
             </div>
         </details>
 
-        <details class="nav-dropdown">
+        <details class="nav-dropdown" name="myco-menu">
             <summary>NGHIÊN CỨU KHOA HỌC</summary>
             <div class="dropdown-menu">
                 <a href="#nghien-cuu">Nghiên cứu và phát triển</a>
